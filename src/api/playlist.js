@@ -18,6 +18,7 @@ export function fetchById(params) {
   })
 }
 
+// 更新
 export function update(params) {
   return request({
     url: `${baseUrl}/playlist/updatePlaylist`,
@@ -25,5 +26,14 @@ export function update(params) {
       ...params
     },
     method: 'post'
+  })
+}
+
+// 删除
+export function del(params) {
+  return request({
+    params,
+    url: `${baseUrl}/playlist/del`,
+    method: 'get'
   })
 }
