@@ -1,5 +1,12 @@
 <template>
   <div>
+    <!-- 图片上传 -->
+    <div class="filter-container">
+      <el-upload action="http://localhost:3000/swiper/upload">
+        <el-button size="small" type="primary">点击上传</el-button>
+      </el-upload>
+    </div>
+
     <el-table v-loading="loading" :data="swiperList" stripe style="width: 100%">
       <el-table-column type="index" width="50" />
       <el-table-column label="图片" width="400">
