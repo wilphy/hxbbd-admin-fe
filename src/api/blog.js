@@ -10,3 +10,13 @@ export function fetchList(params) {
     }
   })
 }
+
+export function del(params) {
+  return request({
+    url: `${baseURL}/blog/del`,
+    data: {
+      ...params
+    },
+    method: 'post'
+  })
+}
